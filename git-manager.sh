@@ -70,23 +70,24 @@ BAD='\u2718'
 ARROW='\u27a1'
 HAND="\u261b"
 
-# V A R
-isNumber="^-?[0-9]+([.][0-9]+)?$"
 repoSelected=""
 
-# C O N F I G U R A C I Ó N
-SERVER_NAME="Demo Server"
-SERVER='demo@demo.com'
-PORT='2000'
-REPOS_PATH='/path/of/repos/'
-REMOTE_NAME='demo'
+# S T A T I C
+isNumber="^-?[0-9]+([.][0-9]+)?$"
 USERIP=$(hostname --ip-address)
 USER=$(whoami)
 USERHOME=$(ls -m /home)
-SCRIPT_NAME='git-manager'
-CREDENCIAL='DEMO.pem'
-AUTHENTICATION='pem'
-PASSWORD=''
+
+# C O N F I G U R A C I Ó N
+SERVER_NAME="DEMO SERVER"		# name of server
+SERVER='demo@demo.com'			# user@server
+PORT='5050'						# ssh port
+REPOS_PATH='/path/to/repos/'	# path to repos in server
+REMOTE_NAME='demo'				# git default remote name
+SCRIPT_NAME='git-admin'			# name to call this script
+AUTHENTICATION='pem' 			# pem or rsa (default rsa)
+CREDENCIAL='GIT.pem'			# if $AUTHENTICATION is pem
+PASSWORD='' 					# if $AUTHENTICATION is rsa
 
 clearForReal() { printf "\ec"; }
 
